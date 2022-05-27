@@ -15,3 +15,9 @@ client = bigquery.Client(
     project='voltaic-country-281210',
     credentials=credentials
 )
+
+query = """
+SELECT current_datetime
+"""
+
+print(client.query(query).to_dataframe())
