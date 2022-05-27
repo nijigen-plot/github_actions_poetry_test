@@ -10,7 +10,6 @@ jobs:
     env:
       test: ${{ secrets.TEST_KEY }}
       POETRY_test: ${{ secrets.TEST_KEY }}
-      POETRY_TEST: ${{ secrets.TEST_KEY }}
 
     steps:
       - uses: actions/checkout@v2
@@ -20,7 +19,7 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.7.12'
-          
+
       - run: pip install poetry
       - run: poetry install
       - run: poetry --version
