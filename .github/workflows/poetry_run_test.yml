@@ -8,8 +8,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      GCP_SERVICE_KEY: ${{ secrets.GCP_SERVICE_KEY }}
-      POETRY_test: ${{ secrets.TEST_KEY }}
+      gcp_service_key: ${{ secrets.GCP_SERVICE_KEY }}
 
     steps:
       - uses: actions/checkout@v2

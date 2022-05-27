@@ -4,7 +4,7 @@ import os
 from google.cloud import bigquery
 from google.oauth2 import service_account
 
-cred = eval(base64.b64decode(os.environ.get('GCP_SERVICE_KEY')))
+cred = eval(base64.b64decode(os.environ.get('gcp_service_key')))
 
 credentials = service_account.Credentials.from_service_account_info(
     cred,
